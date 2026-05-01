@@ -1,23 +1,94 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Reveal articles with a smooth slide and fade
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-        });
-    }, { threshold: 0.1 });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WAR ROOM | LIVE INTEL | OMNINEWS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tactical Overrides for the Star Page -->
+    <style>
+        :root { --war-accent: #ff4d00; --glow: rgba(255, 77, 0, 0.3); }
+        .war-header-alt { padding: 100px 20px; text-align: center; background: linear-gradient(to bottom, #1a0a00, #050505); }
+        .devastation-img { width: 100%; height: 500px; object-fit: cover; border-bottom: 4px solid var(--war-accent); filter: sepia(20%) contrast(120%); }
+        .hot-topic-badge { background: var(--war-accent); color: white; padding: 5px 15px; font-weight: 900; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
 
-    document.querySelectorAll('.article-card').forEach(card => {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(100px)";
-        card.style.transition = "all 1s cubic-bezier(0.19, 1, 0.22, 1)";
-        observer.observe(card);
-    });
+    <header class="war-header-alt">
+        <span class="hot-topic-badge">SITUATION: CRITICAL</span>
+        <h1 style="font-size: 5rem; color: var(--war-accent); font-family: 'Playfair Display';">THE HORMUZ LOGS</h1>
+        <p style="letter-spacing: 4px;">U.S. VS IRAN | STRATEGIC ANALYSIS 2026</p>
+    </header>
 
-    // Custom Button Hover Sound/Light Trigger (Log only for now)
-    document.querySelectorAll('.btn-read-more').forEach(btn => {
-        btn.addEventListener('mouseenter', () => console.log("System: Tactical Data Accessed."));
-    });
-});
+    <div class="news-container">
+        
+        <!-- ARTICLE 1: THE BLOCKADE -->
+        <div class="article-card">
+            <img src="https://images.unsplash.com/photo-1516431883659-655d41c09bf9?q=80&w=1200" alt="Naval Standoff" class="devastation-img">
+            <div class="article-content">
+                <h2>I. The Silence of the Strait</h2>
+                <article>
+                    <p>The 21-mile stretch of the Strait of Hormuz has become a silent graveyard for global trade. Since the dual blockade began, the vibrant blue waters have been replaced by the gray steel of the Fifth Fleet and the aggressive maneuvers of the IRGC. The "soul" of international commerce is suffocating as 20% of the world's liquid petroleum remains trapped behind a wall of high-tensile diplomacy and naval mines.</p>
+                    <p><em>(Expansion: Full 1,000-word analysis on the April 7 truce, naval blockade legality, and the 44% surge in global energy costs).</em></p>
+                </article>
+                <a href="blockade.html" class="btn-read-more">View Strategic Map</a>
+            </div>
+        </div>
+
+        <!-- ARTICLE 2: THE ISLAMABAD COLLAPSE -->
+        <div class="article-card">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="Global Connectivity" class="devastation-img">
+            <div class="article-content">
+                <h2>II. Diplomacy in Ashes</h2>
+                <article>
+                    <p>The Islamabad Accord was meant to be the "Peace of 2026," but it has collapsed into a pile of mutual recriminations. The U.S. demand for a total regional withdrawal versus Iran’s insistence on unfreezing billions in assets has created a "Neither War Nor Peace" stalemate. This diplomatic devastation is felt most in the currency markets, where the petrodollar is facing its first true existential crisis.</p>
+                    <p><em>(Expansion: Full 1,000-word report on the failed 10-point plan and Pakistan's role as a mediator).</em></p>
+                </article>
+                <a href="diplomacy.html" class="btn-read-more">Access Secret Logs</a>
+            </div>
+        </div>
+
+        <!-- ARTICLE 3: THE $10 GALLON -->
+        <div class="article-card">
+            <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=1200" alt="Urban Desertion" class="devastation-img">
+            <div class="article-content">
+                <h2>III. The Homefront Economic Toll</h2>
+                <article>
+                    <p>The devastation of this war is not limited to the Gulf; it is visible in the boarded-up windows of suburban gas stations. The $10-per-gallon reality has gutted the "soul" of the American commute. As energy prices rocket upward, the conflict is forcing a hyper-acceleration in asset tokenization and green energy infrastructure that would have normally taken decades to implement.</p>
+                    <p><em>(Expansion: Full 1,000-word deep dive into the 44% energy spike and the death of the traditional commute).</em></p>
+                </article>
+                <a href="economy.html" class="btn-read-more">Market Data</a>
+            </div>
+        </div>
+
+        <!-- ARTICLE 4: THE ROBOTIC FRONT -->
+        <div class="article-card">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200" alt="Military AI" class="devastation-img">
+            <div class="article-content">
+                <h2>IV. Rise of the Autonomous Swarms</h2>
+                <article>
+                    <p>2026 is the year the human soldier became a spectator. AI swarms, powered by "Cloud 3.0," now conduct tactical strikes with millisecond precision, leaving the battlefield a landscape of charred robotics and shattered hardware. This "soul-less" combat has revolutionized the projection of force but left international law in a state of total chaos.</p>
+                    <p><em>(Expansion: Full 1,000-word technical analysis of autonomous multi-agent systems in the Hormuz zone).</em></p>
+                </article>
+                <a href="tech.html" class="btn-read-more">AI Specs</a>
+            </div>
+        </div>
+
+        <!-- ARTICLE 5: THE GLOBAL RESET -->
+        <div class="article-card">
+            <img src="https://images.unsplash.com/photo-1464802686167-b939a67a06a1?q=80&w=1200" alt="World at Night" class="devastation-img">
+            <div class="article-content">
+                <h2>V. The New World Order</h2>
+                <article>
+                    <p>The aftermath of the U.S.-Iran standoff is a global order rewritten. We are seeing the final convergence of TradFi and DeFi as the world scrambles for stability away from the petrodollar. The "vibrant" energy of the new economy is rising from the ashes of the old, with energy independence becoming the ultimate status symbol of 2026.</p>
+                    <p><em>(Expansion: Full 1,000-word analysis on the Clarity Act and the shift to on-chain bonds).</em></p>
+                </article>
+                <a href="finance.html" class="btn-read-more">Future Forecast</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
